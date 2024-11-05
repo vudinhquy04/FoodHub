@@ -16,9 +16,9 @@ import com.quyvd.foodhub.adapter.UserAdapter
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var recyclerViewUsers: RecyclerView
-    private lateinit var userAdapter: UserAdapter
-    private val userList = ArrayList<FirebaseUser>()
+//    private lateinit var recyclerViewUsers: RecyclerView
+//    private lateinit var userAdapter: UserAdapter
+//    private val userList = ArrayList<FirebaseUser>()
 //    private val db = FirebaseFirestore.getInstance()
 
     private lateinit var recyclerViewStudents: RecyclerView
@@ -50,33 +50,6 @@ class MainActivity : AppCompatActivity() {
             dialog.show(supportFragmentManager, "StudentDialogFragment")
         }
 
-//        FirebaseApp.initializeApp(this)
-//
-//        recyclerViewUsers = findViewById(R.id.recyclerViewUsers)
-//
-//        userAdapter = UserAdapter(userList)
-//        recyclerViewUsers.adapter = userAdapter
-//
-//        recyclerViewUsers.layoutManager = GridLayoutManager(this, 2,LinearLayoutManager.VERTICAL,false)
-//        fetchUsers()
-
-
-
-/////////////////////////////////////////////////////////////////////////////////////
-
-
-//
-//        // Nhận dữ liệu user từ Intent
-//        val email = intent.getStringExtra("email")
-//        val displayName = intent.getStringExtra("displayName")
-//        val photoUrl = intent.getStringExtra("photoUrl")
-//        val password = intent.getStringExtra("password")
-//
-//        // Hiển thị dữ liệu user
-//        findViewById<TextView>(R.id.tvEmail).text = email
-//        findViewById<TextView>(R.id.tvDisplayName).text = displayName
-//        findViewById<TextView>(R.id.tvPhotoUrl).text = photoUrl
-//        findViewById<TextView>(R.id.tvPassword).text = password
 
     }
 

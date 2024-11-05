@@ -1,4 +1,4 @@
 package com.quyvd.foodhub.model
 
-class Animal {
+data class Animal(var name: String = "", var age: Int = 0 ) {
 }

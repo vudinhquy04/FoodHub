@@ -1,4 +1,4 @@
 package com.quyvd.foodhub.model
 
-class Oto {
+data class Oto(var nameOto: String = "", var hangOto : String = "", var giaOto : Int = 0) {
 }
