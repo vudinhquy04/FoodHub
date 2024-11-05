@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "722586507385",
+    "project_id": "demologinwith-97d74",
+    "storage_bucket": "demologinwith-97d74.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:722586507385:android:95bee1b870aa879869dca8",
+        "android_client_info": {
+          "package_name": "com.quyvd.foodhub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "722586507385-4lmtfd6fq5phsk3a7ifpmefvrcfmn9h3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.quyvd.foodhub",
+            "certificate_hash": "f5c591d51025db102e3128125ba9881dcdc72a0c"
+          }
+        },
+        {
+          "client_id": "722586507385-16apc1671l6urhu3j3fl105086rbgpjf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDR4aLEL4zjKvQAwSNYbizhzRcDLsv0sIM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "722586507385-16apc1671l6urhu3j3fl105086rbgpjf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
