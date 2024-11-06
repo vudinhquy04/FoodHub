@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".OtoDialogFragment">
+
+    <EditText
+        android:id="@+id/edtNameOto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name Oto" />
+
+    <EditText
+        android:id="@+id/edtHangOto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Hang Oto" />
+
+    <EditText
+        android:id="@+id/edtGiaOto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Gia Oto" />
+
+    <Button
+        android:id="@+id/btnAddOto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Oto" />
+
+
+</LinearLayout>
