@@ -9,18 +9,23 @@ import androidx.recyclerview.widget.RecyclerView
 import com.quyvd.foodhub.R
 import com.quyvd.foodhub.model.Oto
 
-class OtoAdapter(val otoList : List<Oto>) : RecyclerView.Adapter<OtoAdapter.ViewHolder>() {
+class OtoAdapter(val otoList : List<Oto>, val itemClick : (Oto) -> Unit) : RecyclerView.Adapter<OtoAdapter.ViewHolder>() {
 
     inner class ViewHolder(view : View) : RecyclerView.ViewHolder(view) {
 
         var tvNameOto = view.findViewById<TextView>(R.id.tvNameOto)
         var tvHangOto = view.findViewById<TextView>(R.id.tvHangOto)
         var tvGiaOto = view.findViewById<TextView>(R.id.tvGiaOto)
+        var tvId = view.findViewById<TextView>(R.id.tvId)
 
         fun bin(oto: Oto) {
+            tvId.text = oto.id.toString()
             tvNameOto.text = oto.nameOto
             tvHangOto.text = oto.hangOto
             tvGiaOto.text = oto.giaOto.toString()
+
+            itemView.setOnClickListener { itemClick(oto) }
+
         }
 
     }

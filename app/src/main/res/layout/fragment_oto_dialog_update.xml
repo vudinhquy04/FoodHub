@@ -4,37 +4,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".OtoDialogFragment">
+    tools:context=".OtoDialogUpdateFragment">
 
     <EditText
-        android:id="@+id/edtId"
+        android:id="@+id/edtIdUpdate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Id" />
 
     <EditText
-        android:id="@+id/edtNameOto"
+        android:id="@+id/edtNameOtoUpdate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Name Oto" />
 
     <EditText
-        android:id="@+id/edtHangOto"
+        android:id="@+id/edtHangOtoUpdate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Hang Oto" />
 
     <EditText
-        android:id="@+id/edtGiaOto"
+        android:id="@+id/edtGiaOtoUpdate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Gia Oto" />
 
     <Button
-        android:id="@+id/btnAddOto"
+        android:id="@+id/btnSaveOto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add Oto" />
-
+        android:text="Save" />
 
 </LinearLayout>

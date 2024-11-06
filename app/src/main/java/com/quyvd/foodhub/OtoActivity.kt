@@ -31,17 +31,22 @@ class OtoActivity : AppCompatActivity() {
         db = FirebaseFirestore.getInstance()
 
         rvOto = findViewById(R.id.rvOto)
-        otoAdapter = OtoAdapter(otoList)
+        otoAdapter = OtoAdapter(otoList) { oto -> itemClick(oto) }
         rvOto.adapter = otoAdapter
-        rvOto.layoutManager = GridLayoutManager(this,2,RecyclerView.VERTICAL,false)
+        rvOto.layoutManager = LinearLayoutManager(this)
 
         fetchOto()
 
-        findViewById<Button>(R.id.btAddOto).setOnClickListener {
-            val otoDialog = OtoDialogFragment()
-            otoDialog.show(supportFragmentManager, "OtoDialogFragment")
-        }
+//        findViewById<Button>(R.id.btAddOto).setOnClickListener {
+//            val otoDialog = OtoDialogFragment()
+//            otoDialog.show(supportFragmentManager, "OtoDialogFragment")
+//        }
 
+    }
+    private fun itemClick(oto: Oto){
+
+        val dialogUpdateOto = OtoDialogUpdateFragment(oto)
+        dialogUpdateOto.show(supportFragmentManager,"OtoDialogUpdateFragment")
     }
 
 //    private fun getOtos() : List<Oto>{

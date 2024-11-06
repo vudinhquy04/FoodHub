@@ -30,24 +30,28 @@ class OtoDialogFragment : DialogFragment() {
         val edtNameOto = view.findViewById<EditText>(R.id.edtNameOto)
         val edtHangOto = view.findViewById<EditText>(R.id.edtHangOto)
         val edtGiaOto = view.findViewById<EditText>(R.id.edtGiaOto)
+        val edtId = view.findViewById<EditText>(R.id.edtId)
 
 
         btnAddOto.setOnClickListener {
+            val id = edtId.text.toString().toInt()
             val nameOto = edtNameOto.text.toString()
             val hangOto = edtHangOto.text.toString()
             val giaOto = edtGiaOto.text.toString().toInt()
-            addOto(nameOto,hangOto,giaOto)
+
+            addOto(id,nameOto,hangOto,giaOto)
         }
 
         return view
 
     }
 
-  private  fun addOto(nameOto : String, hangOto : String, giaOto : Int){
+  private  fun addOto(id : Int , nameOto : String, hangOto : String, giaOto : Int){
 
-        val oto = Oto(nameOto = nameOto, hangOto = hangOto, giaOto = giaOto)
+        val oto = Oto(id = id ,  nameOto = nameOto, hangOto = hangOto, giaOto = giaOto)
 
-        db.collection("otos").add(oto)
+        db.collection("otos").document("${oto.id}")
+            .set(oto)
             .addOnSuccessListener {
                 dismiss()
                 (activity as OtoActivity).fetchOto()
