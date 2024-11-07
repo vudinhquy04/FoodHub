@@ -4,36 +4,62 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".OtoDialogFragment">
+    tools:context=".OtoDialogFragment"
+    android:background="@drawable/bg_dialog1">
 
     <EditText
         android:id="@+id/edtId"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_dialog"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:padding="10dp"
+        android:layout_marginEnd="10dp"
         android:hint="Id" />
 
     <EditText
         android:id="@+id/edtNameOto"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_dialog"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:padding="10dp"
         android:hint="Name Oto" />
 
     <EditText
-        android:id="@+id/edtHangOto"
+        android:id="@+id/edtCompanyOto"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_dialog"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
         android:hint="Hang Oto" />
 
     <EditText
-        android:id="@+id/edtGiaOto"
+        android:id="@+id/edtPriceOto"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_dialog"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
         android:hint="Gia Oto" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnAddOto"
         android:layout_width="wrap_content"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bg_button"
         android:text="Add Oto" />
 
 

@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
 import android.widget.Button
 import android.widget.EditText
 import androidx.fragment.app.DialogFragment
@@ -27,35 +28,39 @@ class OtoDialogUpdateFragment(private val oto : Oto) : DialogFragment() {
 
         val btnSave = view.findViewById<Button>(R.id.btnSaveOto)
         val edtNameOto = view.findViewById<EditText>(R.id.edtNameOtoUpdate)
-        val edtHangOto = view.findViewById<EditText>(R.id.edtHangOtoUpdate)
-        val edtGiaOto = view.findViewById<EditText>(R.id.edtGiaOtoUpdate)
+        val edtCompanyOto = view.findViewById<EditText>(R.id.edtCompanyOtoUpdate)
+        val edtPriceOto = view.findViewById<EditText>(R.id.edtPriceOtoUpdate)
         val edtId = view.findViewById<EditText>(R.id.edtIdUpdate)
 
         edtId.setText("${oto.id}")
+        edtId.isFocusable = false
+        edtId.isFocusableInTouchMode = false
+
         edtNameOto.setText(oto.nameOto)
-        edtHangOto.setText(oto.hangOto)
-        edtGiaOto.setText("${oto.giaOto}")
+        edtCompanyOto.setText(oto.companyOto)
+        edtPriceOto.setText("${oto.priceOto}")
 
         btnSave.setOnClickListener {
             val id = edtId.text.toString().toInt()
             val nameOto = edtNameOto.text.toString()
-            val hangOto = edtHangOto.text.toString()
-            val giaOto = edtGiaOto.text.toString().toInt()
+            val companyOto = edtCompanyOto.text.toString()
+            val priceOto = edtPriceOto.text.toString().toInt()
 
-            saveOto(id,nameOto,hangOto,giaOto)
+            saveOto(id,nameOto,companyOto,priceOto)
         }
-
-
-
-
 
         return view
 
     }
 
-    private fun saveOto(id : Int, nameOto : String, hangOto : String, giaOto : Int){
+    override fun onStart() {
+        super.onStart()
+        dialog?.window?.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT)
+    }
 
-        val oto = Oto(id = id,nameOto =nameOto, hangOto = hangOto, giaOto = giaOto)
+    private fun saveOto(id : Int, nameOto : String, companyOto : String, priceOto : Int){
+
+        val oto = Oto(id = id,nameOto =nameOto, companyOto = companyOto, priceOto = priceOto)
 
         db.collection("otos").document("${oto.id}").set(oto).addOnSuccessListener {
             dismiss()

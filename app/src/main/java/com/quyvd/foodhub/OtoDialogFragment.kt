@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
 import android.widget.Button
 import android.widget.EditText
 import androidx.fragment.app.DialogFragment
@@ -28,27 +29,31 @@ class OtoDialogFragment : DialogFragment() {
 
         val btnAddOto = view.findViewById<Button>(R.id.btnAddOto)
         val edtNameOto = view.findViewById<EditText>(R.id.edtNameOto)
-        val edtHangOto = view.findViewById<EditText>(R.id.edtHangOto)
-        val edtGiaOto = view.findViewById<EditText>(R.id.edtGiaOto)
+        val edtCompanyOto = view.findViewById<EditText>(R.id.edtCompanyOto)
+        val edtPriceOto = view.findViewById<EditText>(R.id.edtPriceOto)
         val edtId = view.findViewById<EditText>(R.id.edtId)
 
 
         btnAddOto.setOnClickListener {
             val id = edtId.text.toString().toInt()
             val nameOto = edtNameOto.text.toString()
-            val hangOto = edtHangOto.text.toString()
-            val giaOto = edtGiaOto.text.toString().toInt()
+            val companyOto = edtCompanyOto.text.toString()
+            val priceOto = edtPriceOto.text.toString().toInt()
 
-            addOto(id,nameOto,hangOto,giaOto)
+            addOto(id,nameOto,companyOto,priceOto)
         }
 
         return view
 
     }
 
-  private  fun addOto(id : Int , nameOto : String, hangOto : String, giaOto : Int){
+    override fun onStart() {
+        super.onStart()
+dialog?.window?.setLayout(WindowManager.LayoutParams.MATCH_PARENT,WindowManager.LayoutParams.WRAP_CONTENT)
+    }
+  private  fun addOto(id : Int , nameOto : String, companyOto : String, priceOto : Int){
 
-        val oto = Oto(id = id ,  nameOto = nameOto, hangOto = hangOto, giaOto = giaOto)
+        val oto = Oto(id = id ,  nameOto = nameOto, companyOto = companyOto, priceOto = priceOto)
 
         db.collection("otos").document("${oto.id}")
             .set(oto)

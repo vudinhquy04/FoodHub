@@ -4,36 +4,62 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/bg_dialog1"
     tools:context=".OtoDialogUpdateFragment">
 
     <EditText
         android:id="@+id/edtIdUpdate"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_dialog"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:padding="10dp"
         android:hint="Id" />
 
     <EditText
         android:id="@+id/edtNameOtoUpdate"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_dialog"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:padding="10dp"
         android:hint="Name Oto" />
 
     <EditText
-        android:id="@+id/edtHangOtoUpdate"
+        android:id="@+id/edtCompanyOtoUpdate"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_dialog"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:padding="10dp"
+        android:layout_marginEnd="10dp"
         android:hint="Hang Oto" />
 
     <EditText
-        android:id="@+id/edtGiaOtoUpdate"
+        android:id="@+id/edtPriceOtoUpdate"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_dialog"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:padding="10dp"
         android:hint="Gia Oto" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnSaveOto"
+        android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bg_button"
         android:text="Save" />
 
 </LinearLayout>
